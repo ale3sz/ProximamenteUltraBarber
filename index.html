@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es" class="h-full bg-[#070707]">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ULTRA BARBER STUDIO • David | Próximamente</title>
+  <meta name="description" content="Studio privado de autor especializado en cortes fade, perfilado de barba a navaja y diseño capilar. Próximamente nueva plataforma de turnos y club de socios.">
+  <meta name="theme-color" content="#070707">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="ULTRA BARBER STUDIO • David | Próximamente">
+  <meta property="og:description" content="Estamos preparando una nueva plataforma de reservas y club exclusivo. Mientras tanto, visitanos en Instagram @barber_f4de.">
+  <meta property="og:type" content="website">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@1,500;1,600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            display: ['"Space Grotesk"', 'sans-serif'],
+            serif: ['"Playfair Display"', 'serif'],
+          },
+          colors: {
+            gold: {
+              DEFAULT: '#D4AF37',
+              light: '#F3E5AB',
+              dark: '#997F24',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    @keyframes pulseSlow {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.6; transform: scale(0.95); }
+    }
+    .pulse-gold {
+      animation: pulseSlow 2.5s infinite ease-in-out;
+    }
+    .gold-gradient-text {
+      background: linear-gradient(135deg, #FFF8DC 0%, #D4AF37 50%, #AA820A 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .gold-button {
+      background: linear-gradient(135deg, #D4AF37 0%, #F5E6B3 50%, #D4AF37 100%);
+      background-size: 200% auto;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .gold-button:hover {
+      background-position: right center;
+      transform: translateY(-2px);
+      box-shadow: 0 12px 30px -8px rgba(212, 175, 55, 0.4);
+    }
+    .gold-button:active {
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body class="h-full min-h-screen bg-[#070707] text-[#EDE8D0] flex flex-col justify-between selection:bg-[#D4AF37] selection:text-black relative overflow-x-hidden font-sans">
+
+  <!-- Ambient Golden Glow -->
+  <div class="fixed top-0 left-1/2 -translate-x-1/2 w-[700px] h-[380px] bg-[#D4AF37]/10 blur-[150px] pointer-events-none rounded-full"></div>
+  <div class="fixed bottom-0 right-0 w-[450px] h-[320px] bg-amber-600/5 blur-[140px] pointer-events-none rounded-full"></div>
+
+  <!-- Header -->
+  <header class="relative z-10 max-w-4xl w-full mx-auto px-6 pt-8 pb-4 flex items-center justify-between">
+    <div class="flex items-center gap-3 text-left">
+      <div class="w-11 h-11 rounded-2xl bg-neutral-900 border border-[#D4AF37]/40 flex items-center justify-center text-[#D4AF37] shadow-xl">
+        <!-- Scissors Icon -->
+        <svg class="w-5 h-5 -rotate-45" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="6" cy="6" r="3"></circle>
+          <circle cx="6" cy="18" r="3"></circle>
+          <line x1="20" y1="4" x2="8.12" y2="15.88"></line>
+          <line x1="14.47" y1="14.48" x2="20" y2="20"></line>
+          <line x1="8.12" y1="8.12" x2="12" y2="12"></line>
+        </svg>
+      </div>
+      <div>
+        <span class="font-display font-bold text-base sm:text-lg tracking-tight text-white block leading-tight">
+          ULTRA BARBER
+        </span>
+        <span class="text-[11px] font-mono text-[#8A898E] tracking-wider uppercase block">
+          David • Studio Privado
+        </span>
+      </div>
+    </div>
+
+    <!-- Status Badge -->
+    <div class="px-3.5 py-1.5 rounded-full bg-neutral-900/90 border border-[#D4AF37]/30 text-[#D4AF37] text-[11px] font-mono uppercase tracking-wider flex items-center gap-2 shadow-sm">
+      <span class="w-2 h-2 rounded-full bg-[#D4AF37] pulse-gold"></span>
+      <span>En construcción</span>
+    </div>
+  </header>
+
+  <!-- Hero Content -->
+  <main class="relative z-10 max-w-xl w-full mx-auto px-6 py-10 sm:py-16 flex-1 flex flex-col justify-center text-center space-y-8">
+    
+    <!-- Sub-badge -->
+    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-neutral-900/80 border border-neutral-800 text-xs font-mono text-neutral-300 mx-auto shadow-inner">
+      <svg class="w-3.5 h-3.5 text-[#D4AF37]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/>
+      </svg>
+      <span>Plataforma de reservas &amp; Club de socios</span>
+    </div>
+
+    <!-- Titles -->
+    <div class="space-y-3">
+      <h1 class="text-4xl sm:text-6xl font-display font-bold text-white tracking-tight leading-[1.08]">
+        Próximamente
+      </h1>
+      <p class="text-xl sm:text-2xl font-serif italic gold-gradient-text font-normal">
+        Estamos preparando algo único para vos
+      </p>
+    </div>
+
+    <!-- Description -->
+    <p class="text-sm sm:text-base text-neutral-400 leading-relaxed max-w-md mx-auto">
+      Muy pronto vas a poder reservar tus turnos en vivo, acceder a tu pase de socio y disfrutar de beneficios exclusivos en cada visita al estudio.
+    </p>
+
+    <!-- Instagram Card -->
+    <div class="p-6 sm:p-8 rounded-3xl bg-neutral-900/80 border border-[#D4AF37]/35 shadow-2xl backdrop-blur-md space-y-6">
+      <div class="space-y-1.5">
+        <span class="text-xs font-mono uppercase tracking-widest text-[#D4AF37] font-semibold block">
+          Mientras tanto
+        </span>
+        <h2 class="text-lg sm:text-xl font-display font-bold text-white">
+          Visítame en Instagram
+        </h2>
+        <p class="text-xs text-neutral-400 max-w-sm mx-auto">
+          Conocé los últimos cortes de autor, degradés y turnos disponibles de la semana:
+        </p>
+      </div>
+
+      <!-- Instagram CTA Button -->
+      <a
+        href="https://www.instagram.com/barber_f4de"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="gold-button w-full py-4 px-6 rounded-2xl text-neutral-950 font-display font-bold text-sm sm:text-base uppercase tracking-wider flex items-center justify-center gap-3 shadow-xl group block"
+      >
+        <svg class="w-5 h-5 text-neutral-950 transition-transform group-hover:scale-110" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+          <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+          <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
+        </svg>
+        <span>@barber_f4de en Instagram</span>
+        <svg class="w-4 h-4 text-neutral-950 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="7" y1="17" x2="17" y2="7"></line>
+          <polyline points="7 7 17 7 17 17"></polyline>
+        </svg>
+      </a>
+
+      <!-- WhatsApp Direct Contact -->
+      <div class="pt-2 border-t border-neutral-800/80 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-neutral-400">
+        <span>¿Necesitás agendar un turno ahora?</span>
+        <a
+          href="https://wa.me/5493413762115?text=Hola%20David%2C%20te%20escribo%20desde%20la%20web%20para%20consultar%20por%20un%20turno"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-1.5 text-emerald-400 hover:text-emerald-300 font-semibold transition-colors"
+        >
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path>
+          </svg>
+          <span>Escribime directo por WhatsApp</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Location & Attention Details -->
+    <div class="flex flex-wrap items-center justify-center gap-4 text-xs font-mono text-neutral-400 pt-1">
+      <div class="flex items-center gap-1.5">
+        <svg class="w-3.5 h-3.5 text-[#D4AF37]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
+          <circle cx="12" cy="10" r="3"></circle>
+        </svg>
+        <span>Eva Perón 52 • Capitán Bermúdez, Santa Fe</span>
+      </div>
+      <span class="hidden sm:inline text-neutral-600">•</span>
+      <div class="flex items-center gap-1.5">
+        <svg class="w-3.5 h-3.5 text-[#D4AF37]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"></circle>
+          <polyline points="12 6 12 12 16 14"></polyline>
+        </svg>
+        <span>Atención exclusiva con turno previo</span>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="relative z-10 max-w-4xl w-full mx-auto px-6 py-6 border-t border-neutral-900 text-center text-xs text-neutral-500">
+    © 2026 ULTRA BARBER STUDIO • David. Todos los derechos reservados.
+  </footer>
+
+</body>
+</html>
