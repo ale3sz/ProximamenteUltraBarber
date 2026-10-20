@@ -1,39 +1,66 @@
 <!DOCTYPE html>
-<html lang="es" class="h-full bg-[#070707]">
+<html lang="es" class="dark h-full bg-[#0B0B0C]">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ULTRA BARBER STUDIO • David | Próximamente</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>David Barber • Próximamente | Club &amp; Turnos VIP</title>
   <meta name="description" content="Studio privado de autor especializado en cortes fade, perfilado de barba a navaja y diseño capilar. Próximamente nueva plataforma de turnos y club de socios.">
-  <meta name="theme-color" content="#070707">
+  <meta name="theme-color" content="#0B0B0C">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="David Barber">
 
   <!-- Open Graph -->
-  <meta property="og:title" content="ULTRA BARBER STUDIO • David | Próximamente">
+  <meta property="og:title" content="David Barber • Próximamente">
   <meta property="og:description" content="Estamos preparando una nueva plataforma de reservas y club exclusivo. Mientras tanto, visitanos en Instagram @barber_f4de.">
   <meta property="og:type" content="website">
 
-  <!-- Google Fonts -->
+  <!-- Exact Google Fonts from Main App -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@1,500;1,600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Azeret+Mono:wght@500;600;700&family=Newsreader:ital,opsz,wght@1,6..72,400;1,6..72,500&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <!-- Tailwind CDN -->
+  <!-- Tailwind CDN with Exact Tokens -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
+      darkMode: 'class',
       theme: {
         extend: {
-          fontFamily: {
-            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
-            display: ['"Space Grotesk"', 'sans-serif'],
-            serif: ['"Playfair Display"', 'serif'],
-          },
           colors: {
-            gold: {
-              DEFAULT: '#D4AF37',
-              light: '#F3E5AB',
-              dark: '#997F24',
+            carbon: {
+              bg: '#0B0B0C',
+              surface: '#141416',
+              elevated: '#1A1A1E',
+              border: 'rgba(255, 255, 255, 0.08)',
+              borderSubtle: 'rgba(255, 255, 255, 0.04)',
+            },
+            pearl: '#EDEDED',
+            mutedGrey: '#8A898E',
+            champagne: '#D4AF37',
+            barber: {
+              gold: '#D4AF37',
+              goldLight: '#E8D595',
+              goldDark: '#997B1C',
+              chai: '#D4AF37',
+              carob: '#0B0B0C',
+              darkBg: '#0B0B0C',
+              darkSurface: '#141416',
+              darkBorder: 'rgba(255, 255, 255, 0.08)',
+              darkText: '#EDEDED',
+              darkMuted: '#8A898E',
             }
+          },
+          fontFamily: {
+            display: ['"Archivo"', 'system-ui', 'sans-serif'],
+            editorial: ['"Newsreader"', 'Georgia', 'serif'],
+            sans: ['"Work Sans"', 'system-ui', 'sans-serif'],
+            mono: ['"Azeret Mono"', 'monospace'],
+          },
+          letterSpacing: {
+            editorial: '0.15em',
+            tightest: '-0.03em',
           }
         }
       }
@@ -41,18 +68,78 @@
   </script>
 
   <style>
-    @keyframes pulseSlow {
-      0%, 100% { opacity: 1; transform: scale(1); }
-      50% { opacity: 0.6; transform: scale(0.95); }
+    :root {
+      color-scheme: dark;
+      caret-color: #D4AF37;
     }
-    .pulse-gold {
-      animation: pulseSlow 2.5s infinite ease-in-out;
+
+    body {
+      background-color: #0D0D0F;
+      background-image: radial-gradient(ellipse 80% 50% at 50% -20%, rgba(229, 195, 120, 0.04), transparent 70%);
+      color: #EDEDED;
+      font-family: 'Work Sans', system-ui, -apple-system, sans-serif;
+      text-underline-offset: 4px;
+      letter-spacing: -0.01em;
+      min-height: 100vh;
     }
-    .gold-gradient-text {
-      background: linear-gradient(135deg, #FFF8DC 0%, #D4AF37 50%, #AA820A 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+
+    h1, h2, h3, .font-display {
+      font-family: 'Archivo', system-ui, sans-serif;
+      letter-spacing: -0.03em;
     }
+
+    .font-editorial {
+      font-family: 'Newsreader', Georgia, serif;
+      letter-spacing: -0.01em;
+    }
+
+    ::selection {
+      background-color: #E5C378;
+      color: #0D0D0F;
+    }
+
+    /* Restrained Architectural Elevation (Exact from main app) */
+    .club-shadow {
+      box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(255, 255, 255, 0.07);
+    }
+
+    /* Apple Wallet / Black Card Tactile Texture (Exact from main app) */
+    .black-card {
+      background: linear-gradient(145deg, #18171B 0%, #111013 55%, #0B0B0D 100%);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 14px;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.8), inset 0 1px 0 0 rgba(255, 255, 255, 0.12);
+    }
+
+    .black-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(229, 195, 120, 0.5), transparent);
+    }
+
+    /* Champagne Badge */
+    .badge-champagne {
+      padding: 0.25rem 0.625rem;
+      border-radius: 0.375rem;
+      background-color: #141417;
+      border: 1px solid rgba(229, 195, 120, 0.4);
+      color: #E5C378;
+      font-family: 'Azeret Mono', monospace;
+      font-size: 10px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.375rem;
+    }
+
+    /* Luxury Gold Button with Satin Feel */
     .gold-button {
       background: linear-gradient(135deg, #D4AF37 0%, #F5E6B3 50%, #D4AF37 100%);
       background-size: 200% auto;
@@ -60,150 +147,161 @@
     }
     .gold-button:hover {
       background-position: right center;
-      transform: translateY(-2px);
-      box-shadow: 0 12px 30px -8px rgba(212, 175, 55, 0.4);
+      transform: translateY(-1.5px);
+      box-shadow: 0 14px 28px -8px rgba(212, 175, 55, 0.35);
     }
     .gold-button:active {
       transform: translateY(0);
+      scale: 0.99;
+    }
+
+    @keyframes pulseSlow {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.5; transform: scale(0.92); }
+    }
+    .pulse-dot {
+      animation: pulseSlow 2s infinite ease-in-out;
     }
   </style>
 </head>
-<body class="h-full min-h-screen bg-[#070707] text-[#EDE8D0] flex flex-col justify-between selection:bg-[#D4AF37] selection:text-black relative overflow-x-hidden font-sans">
+<body class="h-full min-h-screen bg-[#0B0B0C] text-[#EDEDED] antialiased flex flex-col justify-between selection:bg-[#D4AF37] selection:text-[#0B0B0C] relative overflow-x-hidden font-sans">
 
-  <!-- Ambient Golden Glow -->
-  <div class="fixed top-0 left-1/2 -translate-x-1/2 w-[700px] h-[380px] bg-[#D4AF37]/10 blur-[150px] pointer-events-none rounded-full"></div>
-  <div class="fixed bottom-0 right-0 w-[450px] h-[320px] bg-amber-600/5 blur-[140px] pointer-events-none rounded-full"></div>
+  <!-- Subtle Ambient Glow -->
+  <div class="fixed top-0 left-1/2 -translate-x-1/2 w-[700px] h-[350px] bg-[#D4AF37]/[0.035] blur-[140px] pointer-events-none rounded-full"></div>
 
-  <!-- Header -->
-  <header class="relative z-10 max-w-4xl w-full mx-auto px-6 pt-8 pb-4 flex items-center justify-between">
-    <div class="flex items-center gap-3 text-left">
-      <div class="w-11 h-11 rounded-2xl bg-neutral-900 border border-[#D4AF37]/40 flex items-center justify-center text-[#D4AF37] shadow-xl">
-        <!-- Scissors Icon -->
-        <svg class="w-5 h-5 -rotate-45" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <circle cx="6" cy="6" r="3"></circle>
-          <circle cx="6" cy="18" r="3"></circle>
-          <line x1="20" y1="4" x2="8.12" y2="15.88"></line>
-          <line x1="14.47" y1="14.48" x2="20" y2="20"></line>
-          <line x1="8.12" y1="8.12" x2="12" y2="12"></line>
-        </svg>
+  <!-- Studio Header (Matches Main App Navbar Exactly) -->
+  <header class="sticky top-0 z-40 w-full bg-[#0D0D0F]/90 backdrop-blur-md border-b border-white/[0.08] transition-colors">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between gap-4">
+      <!-- Brand Identity -->
+      <div class="flex items-center gap-3 text-left">
+        <div class="w-8 h-8 rounded-md bg-[#141417] border border-white/[0.1] flex items-center justify-center text-[#E5C378] shrink-0">
+          <!-- Scissors icon identical to main app -->
+          <svg class="w-4 h-4 -rotate-45 stroke-[1.5]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="6" cy="6" r="3"></circle>
+            <circle cx="6" cy="18" r="3"></circle>
+            <line x1="20" y1="4" x2="8.12" y2="15.88"></line>
+            <line x1="14.47" y1="14.48" x2="20" y2="20"></line>
+            <line x1="8.12" y1="8.12" x2="12" y2="12"></line>
+          </svg>
+        </div>
+        <div>
+          <span class="font-display font-bold text-sm sm:text-base tracking-tight text-[#EDEDED] block leading-tight">
+            DAVID BARBER
+          </span>
+          <span class="text-[9px] font-mono tracking-[0.2em] text-[#8A898E] uppercase block">
+            Studio &amp; Club Privado
+          </span>
+        </div>
       </div>
-      <div>
-        <span class="font-display font-bold text-base sm:text-lg tracking-tight text-white block leading-tight">
-          ULTRA BARBER
-        </span>
-        <span class="text-[11px] font-mono text-[#8A898E] tracking-wider uppercase block">
-          David • Studio Privado
-        </span>
-      </div>
-    </div>
 
-    <!-- Status Badge -->
-    <div class="px-3.5 py-1.5 rounded-full bg-neutral-900/90 border border-[#D4AF37]/30 text-[#D4AF37] text-[11px] font-mono uppercase tracking-wider flex items-center gap-2 shadow-sm">
-      <span class="w-2 h-2 rounded-full bg-[#D4AF37] pulse-gold"></span>
-      <span>En construcción</span>
+      <!-- Live Status Badge -->
+      <div class="badge-champagne">
+        <span class="w-1.5 h-1.5 rounded-full bg-[#D4AF37] pulse-dot"></span>
+        <span>En construcción</span>
+      </div>
     </div>
   </header>
 
-  <!-- Hero Content -->
-  <main class="relative z-10 max-w-xl w-full mx-auto px-6 py-10 sm:py-16 flex-1 flex flex-col justify-center text-center space-y-8">
+  <!-- Hero Main Content -->
+  <main class="relative z-10 max-w-xl w-full mx-auto px-4 sm:px-6 py-10 sm:py-16 flex-1 flex flex-col justify-center text-center space-y-7">
     
-    <!-- Sub-badge -->
-    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-neutral-900/80 border border-neutral-800 text-xs font-mono text-neutral-300 mx-auto shadow-inner">
-      <svg class="w-3.5 h-3.5 text-[#D4AF37]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/>
-      </svg>
-      <span>Plataforma de reservas &amp; Club de socios</span>
+    <!-- Micro Tagline -->
+    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-[#141417] border border-white/[0.08] text-[10px] font-mono uppercase tracking-[0.15em] text-[#8A898E] mx-auto">
+      <span class="text-[#D4AF37]">●</span>
+      <span>Nueva plataforma de reservas &amp; Pase de Socio</span>
     </div>
 
-    <!-- Titles -->
-    <div class="space-y-3">
-      <h1 class="text-4xl sm:text-6xl font-display font-bold text-white tracking-tight leading-[1.08]">
+    <!-- Editorial Typography Block -->
+    <div class="space-y-2.5">
+      <h1 class="text-4xl sm:text-5xl md:text-6xl font-display font-bold text-[#EDEDED] tracking-tight leading-[1.08]">
         Próximamente
       </h1>
-      <p class="text-xl sm:text-2xl font-serif italic gold-gradient-text font-normal">
-        Estamos preparando algo único para vos
+      <p class="text-xl sm:text-2xl md:text-3xl font-editorial italic text-[#D4AF37] font-normal leading-snug">
+        Estamos preparando algo exclusivo para vos
       </p>
     </div>
 
-    <!-- Description -->
-    <p class="text-sm sm:text-base text-neutral-400 leading-relaxed max-w-md mx-auto">
-      Muy pronto vas a poder reservar tus turnos en vivo, acceder a tu pase de socio y disfrutar de beneficios exclusivos en cada visita al estudio.
+    <!-- Narrative Description -->
+    <p class="text-[13px] sm:text-sm text-[#8A898E] leading-relaxed max-w-md mx-auto">
+      Muy pronto vas a poder solicitar tus turnos en tiempo real, acumular puntos con cada corte y acceder a beneficios únicos de socio desde tu celular.
     </p>
 
-    <!-- Instagram Card -->
-    <div class="p-6 sm:p-8 rounded-3xl bg-neutral-900/80 border border-[#D4AF37]/35 shadow-2xl backdrop-blur-md space-y-6">
-      <div class="space-y-1.5">
-        <span class="text-xs font-mono uppercase tracking-widest text-[#D4AF37] font-semibold block">
+    <!-- Black Card Container (Inspired by Main App Black Card) -->
+    <div class="black-card p-6 sm:p-7 text-left space-y-5">
+      <div class="space-y-1">
+        <span class="text-[10px] font-mono uppercase tracking-[0.2em] text-[#D4AF37] font-semibold block">
           Mientras tanto
         </span>
-        <h2 class="text-lg sm:text-xl font-display font-bold text-white">
+        <h2 class="text-lg sm:text-xl font-display font-bold text-[#EDEDED] leading-tight">
           Visítame en Instagram
         </h2>
-        <p class="text-xs text-neutral-400 max-w-sm mx-auto">
-          Conocé los últimos cortes de autor, degradés y turnos disponibles de la semana:
+        <p class="text-xs text-[#8A898E] leading-relaxed">
+          Seguí los últimos cortes fade de autor, trabajos en el sillón y disponibilidad de la semana:
         </p>
       </div>
 
-      <!-- Instagram CTA Button -->
+      <!-- Instagram Satin Gold Button -->
       <a
         href="https://www.instagram.com/barber_f4de"
         target="_blank"
         rel="noopener noreferrer"
-        class="gold-button w-full py-4 px-6 rounded-2xl text-neutral-950 font-display font-bold text-sm sm:text-base uppercase tracking-wider flex items-center justify-center gap-3 shadow-xl group block"
+        class="gold-button w-full py-3.5 px-5 rounded-md text-[#0B0B0C] font-mono text-xs font-bold uppercase tracking-[0.15em] flex items-center justify-center gap-2.5 shadow-md active:scale-[0.98] transition-all block text-center"
       >
-        <svg class="w-5 h-5 text-neutral-950 transition-transform group-hover:scale-110" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <svg class="w-4 h-4 text-[#0B0B0C] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
           <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
           <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
         </svg>
         <span>@barber_f4de en Instagram</span>
-        <svg class="w-4 h-4 text-neutral-950 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <svg class="w-3.5 h-3.5 text-[#0B0B0C] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
           <line x1="7" y1="17" x2="17" y2="7"></line>
           <polyline points="7 7 17 7 17 17"></polyline>
         </svg>
       </a>
 
-      <!-- WhatsApp Direct Contact -->
-      <div class="pt-2 border-t border-neutral-800/80 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-neutral-400">
-        <span>¿Necesitás agendar un turno ahora?</span>
+      <!-- Secondary WhatsApp Direct Booking Handshake -->
+      <div class="pt-3 border-t border-white/[0.08] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 text-xs">
+        <span class="text-[#8A898E] text-[11px] font-mono">¿Querés agendar un turno ahora?</span>
         <a
           href="https://wa.me/5493413762115?text=Hola%20David%2C%20te%20escribo%20desde%20la%20web%20para%20consultar%20por%20un%20turno"
           target="_blank"
           rel="noopener noreferrer"
-          class="inline-flex items-center gap-1.5 text-emerald-400 hover:text-emerald-300 font-semibold transition-colors"
+          class="inline-flex items-center gap-1.5 text-[#E5C378] hover:text-white font-mono text-[11px] font-semibold transition-colors"
         >
-          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <svg class="w-3.5 h-3.5 text-[#25D366]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path>
           </svg>
-          <span>Escribime directo por WhatsApp</span>
+          <span>Escribime por WhatsApp &rarr;</span>
         </a>
       </div>
     </div>
 
-    <!-- Location & Attention Details -->
-    <div class="flex flex-wrap items-center justify-center gap-4 text-xs font-mono text-neutral-400 pt-1">
-      <div class="flex items-center gap-1.5">
-        <svg class="w-3.5 h-3.5 text-[#D4AF37]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Studio Location & Hours Strip (Matches Main App Strip) -->
+    <div class="p-3.5 rounded-md bg-[#141417] border border-white/[0.08] flex flex-col sm:flex-row items-center justify-between gap-2.5 text-[11px] font-mono text-[#8A898E]">
+      <div class="flex items-center gap-2">
+        <svg class="w-3.5 h-3.5 text-[#D4AF37] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
           <circle cx="12" cy="10" r="3"></circle>
         </svg>
-        <span>Eva Perón 52 • Capitán Bermúdez, Santa Fe</span>
+        <span>Eva Perón 52 • Capitán Bermúdez</span>
       </div>
-      <span class="hidden sm:inline text-neutral-600">•</span>
-      <div class="flex items-center gap-1.5">
-        <svg class="w-3.5 h-3.5 text-[#D4AF37]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <div class="flex items-center gap-2 text-[#E5C378]">
+        <svg class="w-3.5 h-3.5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <circle cx="12" cy="12" r="10"></circle>
           <polyline points="12 6 12 12 16 14"></polyline>
         </svg>
-        <span>Atención exclusiva con turno previo</span>
+        <span>Atención con turno previo</span>
       </div>
     </div>
 
   </main>
 
-  <!-- Footer -->
-  <footer class="relative z-10 max-w-4xl w-full mx-auto px-6 py-6 border-t border-neutral-900 text-center text-xs text-neutral-500">
-    © 2026 ULTRA BARBER STUDIO • David. Todos los derechos reservados.
+  <!-- Studio Footer (Matches Main App Footer) -->
+  <footer class="relative z-10 w-full border-t border-white/[0.08] bg-[#0D0D0F]/80 text-[#8A898E] py-5 px-4 text-center">
+    <div class="max-w-4xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2 text-[11px] font-mono">
+      <span>DAVID BARBER STUDIO • Club &amp; Turnos VIP</span>
+      <span class="text-[#8A898E]/70">&copy; 2026 Todos los derechos reservados.</span>
+    </div>
   </footer>
 
 </body>
